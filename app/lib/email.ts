@@ -16,7 +16,7 @@ export async function sendToEmails(
   subject = "Summary of Transcript"
 ) {
   const transporter = await createTransporter();
-  const limitedEmails = emails.slice(0, 5);
+  const limitedEmails = emails.slice(0, 8);
 
   for (const email of limitedEmails) {
     (async () => {

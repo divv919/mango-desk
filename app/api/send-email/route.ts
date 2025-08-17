@@ -1,8 +1,7 @@
 import { sendToEmails } from "@/app/lib/email";
+import { emailRegex } from "@/app/lib/util";
 import { NextRequest, NextResponse } from "next/server";
 import z from "zod";
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // ✅ Schema with email validation
 const BodySchema = z.object({

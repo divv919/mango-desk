@@ -6,7 +6,7 @@ import { z } from "zod";
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const SummaryBodySchema = z.object({
-  transcript: z.string(),
+  transcript: z.string().min(20, "Trancript should be minimum 20 words"),
   prompt: z.string(),
 });
 
@@ -55,7 +55,9 @@ Your job is to take messy transcripts, raw text, or unstructured notes, and retu
         },
         {
           role: "user",
-          content: `transcript is : ${truncatedTranscript} Additional Prompt by user : ${truncatedPrompt}`,
+          content: `transcript is : ${truncatedTranscript}  ${
+            !!truncatedPrompt && "Additional Prompt by user :" + truncatedPrompt
+          }`,
         },
       ],
       model: "openai/gpt-oss-20b",

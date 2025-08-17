@@ -14,3 +14,5 @@ export function fromHTMLToText(html: string) {
     wordwrap: 150,
   });
 }
+
+export const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
