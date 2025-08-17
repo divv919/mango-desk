@@ -79,7 +79,7 @@ export default function Step2({
   };
 
   return (
-    <div className="w-[1000px] flex flex-col justify-center items-start gap-5">
+    <div className="w-full xl:w-[1000px] flex flex-col justify-center items-start gap-5">
       <div>
         <Button onClick={handleCopy}>Copy</Button>
       </div>
@@ -87,7 +87,7 @@ export default function Step2({
         <Editor setValue={setSummary} value={summary} />
       </div>
       <div className="w-full flex flex-col gap-2 items-start">
-        <div className="w-1/3 flex  gap-2 items-end">
+        <div className="w-full xl:w-1/3 flex  gap-2 items-end">
           <div className="flex flex-col gap-2">
             <Label htmlFor="email">Enter Email</Label>
             <Input
@@ -124,7 +124,7 @@ export default function Step2({
         </div>
         {/* dialog */}
       </div>
-      <div className="w-2/3  flex gap-2 items-end">
+      <div className="w-full xl:w-2/3  flex gap-2 items-end">
         <div className="flex flex-col gap-2 w-full">
           <Label htmlFor="subject">Enter Subject of Email</Label>
           <Input

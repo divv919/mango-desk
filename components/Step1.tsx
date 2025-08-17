@@ -47,7 +47,7 @@ export default function Step1({
     setIsTranscriptFill(transcript.length >= 20);
   }, [transcript]);
   return (
-    <div className="w-[1000px] flex flex-col justify-center items-start gap-5">
+    <div className="w-full xl:w-[1000px] flex flex-col justify-center items-start gap-5">
       <div className="w-full space-y-[10px]">
         <div className="flex justify-between items-center">
           <Label htmlFor="transcript">Your Transcript</Label>

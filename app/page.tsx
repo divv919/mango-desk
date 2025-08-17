@@ -11,7 +11,7 @@ export default function Home() {
   const [summary, setSummary] = useState(``);
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-[40px] relative">
+    <div className="w-full flex flex-col justify-center items-center min-h-screen py-[40px] px-[20px] md:px-[40px] xl:px-[0px] relative">
       {isLoading && (
         <div className="absolute w-full h-full bg-black/40 flex items-center justify-center">
           <div className="size-fit ">
